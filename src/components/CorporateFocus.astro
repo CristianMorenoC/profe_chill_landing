@@ -1,0 +1,75 @@
+---
+import { Presentation, Mail, FileText, Handshake, FileCheck, Users, Briefcase, Code } from 'lucide-react';
+
+interface Props {
+  lang: 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+
+const content = lang === 'en' ? {
+  title: 'Corporate Spanish/English Focus',
+  subtitle: 'Real workplace examples and industry-specific training',
+  useCases: [
+    { icon: 'presentation', title: 'Business Meetings', description: 'Lead and participate confidently' },
+    { icon: 'mail', title: 'Email Writing', description: 'Professional correspondence' },
+    { icon: 'presentation', title: 'Presentations', description: 'Deliver impactful talks' },
+    { icon: 'handshake', title: 'Negotiations', description: 'Close deals effectively' },
+    { icon: 'filecheck', title: 'Reports & Documentation', description: 'Clear written communication' },
+    { icon: 'users', title: 'Cross-cultural Communication', description: 'Navigate cultural differences' },
+    { icon: 'briefcase', title: 'Executive Communication', description: 'Leadership language skills' },
+    { icon: 'code', title: 'Technical Vocabulary', description: 'Industry-specific terms' },
+  ],
+  industries: 'Industries Served: Tech, Consulting, Finance, Law, Health, HR, Operations, Marketing, Engineering, Racing, Insurance Broking, Aviation'
+} : {
+  title: 'Enfoque Corporativo en Español/Inglés',
+  subtitle: 'Ejemplos reales del lugar de trabajo y capacitación específica por industria',
+  useCases: [
+    { icon: 'presentation', title: 'Reuniones de Negocios', description: 'Lidera y participa con confianza' },
+    { icon: 'mail', title: 'Redacción de Correos', description: 'Correspondencia profesional' },
+    { icon: 'presentation', title: 'Presentaciones', description: 'Realiza charlas impactantes' },
+    { icon: 'handshake', title: 'Negociaciones', description: 'Cierra tratos efectivamente' },
+    { icon: 'filecheck', title: 'Reportes y Documentación', description: 'Comunicación escrita clara' },
+    { icon: 'users', title: 'Comunicación Intercultural', description: 'Navega diferencias culturales' },
+    { icon: 'briefcase', title: 'Comunicación Ejecutiva', description: 'Habilidades de lenguaje de liderazgo' },
+    { icon: 'code', title: 'Vocabulario Técnico', description: 'Términos específicos de la industria' },
+  ],
+  industries: 'Industrias Atendidas: Tecnología, Consultoría, Finanzas, Derecho, Salud, RRHH, Operaciones, Marketing, Ingeniería, Carreras, Corretaje de Seguros, Aviación'
+};
+---
+
+<section id="corporate-focus" class="py-20 bg-gradient-to-b from-brand-beige/30 to-white dark:from-slate-800 dark:to-slate-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">
+        {content.title}
+      </h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+        {content.subtitle}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      {content.useCases.map((useCase, index) => (
+        <div key={index} class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky-blue to-brand-light-green rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Presentation className="w-6 h-6 text-white" />
+          </div>
+          <h3 class="font-heading font-semibold text-gray-900 dark:text-white mb-2">
+            {useCase.title}
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            {useCase.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-gradient-to-r from-brand-sky-blue/20 to-brand-light-green/20 dark:from-brand-sky-blue/10 dark:to-brand-light-green/10 rounded-2xl p-8 border border-brand-sky-blue/30 dark:border-brand-sky-blue/20">
+      <p class="text-center text-gray-800 dark:text-gray-200 font-medium">
+        {content.industries}
+      </p>
+    </div>
+  </div>
+</section>
+

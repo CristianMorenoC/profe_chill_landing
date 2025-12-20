@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "benefits": "Beneficios",
+    "about": "Acerca de",
+    "howItWorks": "Cómo Funciona",
+    "corporateFocus": "Enfoque Corporativo",
+    "experience": "Experiencia",
+    "testimonials": "Testimonios",
+    "faq": "Preguntas",
+    "contact": "Contacto"
+  },
+  "common": {
+    "bookConsultation": "Reserva tu Consulta Gratuita",
+    "learnMore": "Conoce Más",
+    "chatWithMe": "Chatea conmigo",
+    "subscribe": "Suscribirse",
+    "close": "Cerrar"
+  },
+  "hero": {
+    "title": "Profesor Corporativo de Inglés con más de 10 Años de Experiencia",
+    "subtitle": "Ayudo a profesionales a comunicarse con confianza en inglés mediante clases corporativas personalizadas enfocadas en situaciones reales de trabajo, reuniones, presentaciones y comunicación ejecutiva.",
+    "ctaPrimary": "Reserva tu Consulta Gratuita",
+    "ctaSecondary": "Conoce Más"
+  },
+  "valueProps": {
+    "title": "¿Por Qué Elegir Profe Chill?",
+    "personalizedTitle": "Currículo Personalizado",
+    "personalizedText": "Cada clase se adapta a tu rol, industria y necesidades de comunicación",
+    "corporateTitle": "Enfoque Corporativo",
+    "corporateText": "Presentaciones, negociaciones, reportes y comunicación ejecutiva",
+    "multilingualTitle": "Enseñanza Multilingüe",
+    "multilingualText": "Clases disponibles en inglés, español, portugués, italiano o francés",
+    "resultsTitle": "Orientado a Resultados",
+    "resultsText": "95% de los estudiantes mejoran su comunicación laboral en 6-8 semanas"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "intro": "Soy Juan Diego Gómez, un Profesor Corporativo de Español con más de 10 años de experiencia enseñando a ejecutivos, gerentes, equipos y profesionales internacionales de Europa, EE.UU. y América Latina.",
+    "background": "Antes de convertirme en profesor de idiomas a tiempo completo, obtuve un título en Ingeniería Mecánica, lo que influye fuertemente en mi forma de enseñar hoy. Esta formación me ayuda a desglosar conceptos complejos en explicaciones claras, simples y tangibles, algo que mis estudiantes valoran, especialmente al tratar con gramática avanzada o habilidades de comunicación abstractas.",
+    "approach": "Mi enfoque combina una estructura clara, escenarios corporativos reales y coaching personalizado de comunicación.",
+    "languagesTitle": "Clases Disponibles En:",
+    "spanish": "Español (nativo)",
+    "english": "Inglés (C1/C2, profesional y académico)",
+    "portuguese": "Portugués (B2/C1)",
+    "italian": "Italiano (B1/B2)",
+    "french": "Francés (B1/B2)",
+    "experience": "Mi experiencia aprendiendo múltiples idiomas me permite identificar patrones, anticipar dificultades y ayudar a los estudiantes a progresar más rápido con estrategias que realmente funcionan en conversaciones reales y entornos profesionales.",
+    "learnLanguageTitle": "Elige el idioma que quieres aprender",
+    "classLanguageTitle": "Elige el idioma en el que quieres recibir tu clase"
+  },
+  "footer": {
+    "tagline": "Ayudando a profesionales a comunicarse clara y confiadamente.",
+    "quickLinks": "Enlaces Rápidos",
+    "connect": "Conectar",
+    "copyright": "© 2025 Profe Chill. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+}
+

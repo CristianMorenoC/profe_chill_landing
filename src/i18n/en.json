@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "benefits": "Benefits",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "corporateFocus": "Corporate Focus",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "common": {
+    "bookConsultation": "Book Your Free Consultation",
+    "learnMore": "Learn More",
+    "chatWithMe": "Chat with me",
+    "subscribe": "Subscribe",
+    "close": "Close"
+  },
+  "hero": {
+    "title": "Spanish Corporate Trainer with 10+ Years of Experience",
+    "subtitle": "I help professionals communicate confidently in Spanish through customized corporate lessons focused on real workplace situations, meetings, presentations, and executive communication.",
+    "ctaPrimary": "Book Your Free Consultation",
+    "ctaSecondary": "Learn More"
+  },
+  "valueProps": {
+    "title": "Why Choose Profe Chill",
+    "personalizedTitle": "Personalized Curriculum",
+    "personalizedText": "Every lesson adapts to your role, industry, and communication needs",
+    "corporateTitle": "Corporate Focus",
+    "corporateText": "Presentations, negotiations, reports, and executive communication",
+    "multilingualTitle": "Multilingual Teaching",
+    "multilingualText": "Classes available in English, Spanish, Portuguese, Italian, or French",
+    "resultsTitle": "Results-Oriented",
+    "resultsText": "95% of students improve workplace communication in 6-8 weeks"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "I'm Juan Diego Gómez, a Spanish Corporate Trainer with more than 10 years of experience teaching executives, managers, teams, and international professionals from Europe, the U.S., and Latin America.",
+    "background": "Before becoming a full-time language trainer, I earned a degree in Mechanical Engineering, which strongly influences the way I teach today. This background helps me break down complex concepts into clear, simple, and tangible explanations — something my students value, especially when dealing with advanced grammar or abstract communication skills.",
+    "approach": "My approach combines clear structure, real corporate scenarios, and personalized communication coaching.",
+    "languagesTitle": "Classes Available In:",
+    "spanish": "Spanish (native)",
+    "english": "English (C1/C2, professional and academic)",
+    "portuguese": "Portuguese (B2/C1)",
+    "italian": "Italian (B1/B2)",
+    "french": "French (B1/B2)",
+    "experience": "My experience learning multiple languages allows me to identify patterns, anticipate difficulties, and help students progress faster with strategies that actually work in real conversations and professional environments.",
+    "learnLanguageTitle": "Choose the language you wanna learn",
+    "classLanguageTitle": "Choose the language you wanna receive your class"
+  },
+  "footer": {
+    "tagline": "Helping professionals communicate clearly and confidently.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "copyright": "© 2025 Profe Chill. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
+

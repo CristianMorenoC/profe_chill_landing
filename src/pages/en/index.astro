@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import ValueProposition from '../../components/ValueProposition.astro';
+import About from '../../components/About.astro';
+import HowItWorks from '../../components/HowItWorks';
+import CorporateFocus from '../../components/CorporateFocus.astro';
+import Stats from '../../components/Stats';
+import Testimonials from '../../components/Testimonials';
+import FAQ from '../../components/FAQ';
+import FinalCTA from '../../components/FinalCTA.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFAB from '../../components/WhatsAppFAB.astro';
+import NewsletterModal from '../../components/NewsletterModal';
+
+const lang = 'en';
+---
+
+<Layout
+  title="Spanish Corporate Trainer | Professional Language Lessons | Profe Chill"
+  description="10+ years helping international professionals communicate confidently in Spanish through customized corporate lessons. Expert tutor for meetings, presentations, and executive communication."
+  lang={lang}
+  keywords="spanish corporate trainer, spanish tutor, spanish teacher, spanish professor, corporate spanish lessons, executive spanish training"
+>
+  <Header lang={lang} />
+  
+  <main>
+    <Hero lang={lang} />
+    <ValueProposition lang={lang} />
+    <About lang={lang} />
+    <HowItWorks lang={lang} client:load />
+    <CorporateFocus lang={lang} />
+    <Stats lang={lang} client:load />
+    <Testimonials lang={lang} client:load />
+    <FAQ lang={lang} client:load />
+    <FinalCTA lang={lang} />
+  </main>
+
+  <Footer lang={lang} />
+  <WhatsAppFAB lang={lang} />
+  <NewsletterModal lang={lang} client:load />
+</Layout>
+

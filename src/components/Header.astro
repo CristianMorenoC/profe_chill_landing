@@ -1,0 +1,121 @@
+---
+import { Menu, X } from 'lucide-react';
+import DarkModeToggle from './DarkModeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslations } from '../utils/i18n';
+
+interface Props {
+  lang: 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<header class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 dark:bg-slate-900/80 border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href={`/${lang}/`} class="text-2xl font-heading font-bold text-brand-sky-blue hover:opacity-80 transition-opacity">
+        Profe Chill
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-6 text-sm">
+        <a href={`#benefits`} class="text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium">
+          {t('nav.benefits')}
+        </a>
+        <a href={`#about`} class="text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium">
+          {t('nav.about')}
+        </a>
+        <a href={`#how-it-works`} class="text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium">
+          {t('nav.howItWorks')}
+        </a>
+        <a href={`#corporate-focus`} class="text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium">
+          {t('nav.corporateFocus')}
+        </a>
+        <a href={`#experience`} class="text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium">
+          {t('nav.experience')}
+        </a>
+        <a href={`#testimonials`} class="text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium">
+          {t('nav.testimonials')}
+        </a>
+        <a href={`#faq`} class="text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium">
+          {t('nav.faq')}
+        </a>
+        <a href={`#contact`} class="px-4 py-2 bg-brand-sky-blue text-white rounded-lg hover:bg-brand-sky-blue/90 transition-colors font-medium">
+          {t('nav.contact')}
+        </a>
+      </div>
+
+      <!-- Right Side Controls -->
+      <div class="flex items-center gap-4">
+        <LanguageSwitcher currentLang={lang} client:load />
+        <DarkModeToggle client:load />
+        
+        <!-- Mobile Menu Button -->
+        <button 
+          id="mobile-menu-button"
+          class="lg:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          aria-label="Toggle menu"
+        >
+          <Menu className="w-6 h-6" id="menu-open-icon" />
+          <X className="w-6 h-6 hidden" id="menu-close-icon" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 space-y-3 border-t border-gray-200 dark:border-gray-700 pt-4">
+      <a href={`#benefits`} class="block text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium mobile-menu-link">
+        {t('nav.benefits')}
+      </a>
+      <a href={`#about`} class="block text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium mobile-menu-link">
+        {t('nav.about')}
+      </a>
+      <a href={`#how-it-works`} class="block text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium mobile-menu-link">
+        {t('nav.howItWorks')}
+      </a>
+      <a href={`#corporate-focus`} class="block text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium mobile-menu-link">
+        {t('nav.corporateFocus')}
+      </a>
+      <a href={`#experience`} class="block text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium mobile-menu-link">
+        {t('nav.experience')}
+      </a>
+      <a href={`#testimonials`} class="block text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium mobile-menu-link">
+        {t('nav.testimonials')}
+      </a>
+      <a href={`#faq`} class="block text-gray-700 dark:text-gray-300 hover:text-brand-sky-blue dark:hover:text-brand-sky-blue transition-colors font-medium mobile-menu-link">
+        {t('nav.faq')}
+      </a>
+      <a href={`#contact`} class="block px-4 py-2 bg-brand-sky-blue text-white rounded-lg hover:bg-brand-sky-blue/90 transition-colors font-medium text-center mobile-menu-link">
+        {t('nav.contact')}
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuOpenIcon = document.getElementById('menu-open-icon');
+  const menuCloseIcon = document.getElementById('menu-close-icon');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    menuOpenIcon?.classList.toggle('hidden');
+    menuCloseIcon?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when a link is clicked
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      menuOpenIcon?.classList.remove('hidden');
+      menuCloseIcon?.classList.add('hidden');
+    });
+  });
+</script>
+

@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import ValueProposition from '../../components/ValueProposition.astro';
+import About from '../../components/About.astro';
+import HowItWorks from '../../components/HowItWorks';
+import CorporateFocus from '../../components/CorporateFocus.astro';
+import Stats from '../../components/Stats';
+import Testimonials from '../../components/Testimonials';
+import FAQ from '../../components/FAQ';
+import FinalCTA from '../../components/FinalCTA.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFAB from '../../components/WhatsAppFAB.astro';
+import NewsletterModal from '../../components/NewsletterModal';
+
+const lang = 'es';
+---
+
+<Layout
+  title="Profesor Corporativo de Inglés | Clases Personalizadas | Profe Chill"
+  description="Más de 10 años ayudando a profesionales a comunicarse con confianza en inglés. Clases corporativas personalizadas para reuniones, presentaciones y comunicación ejecutiva."
+  lang={lang}
+  keywords="profesor corporativo de inglés, tutor de inglés, profesor de inglés, clases corporativas de inglés, capacitación ejecutiva en inglés"
+>
+  <Header lang={lang} />
+  
+  <main>
+    <Hero lang={lang} />
+    <ValueProposition lang={lang} />
+    <About lang={lang} />
+    <HowItWorks lang={lang} client:load />
+    <CorporateFocus lang={lang} />
+    <Stats lang={lang} client:load />
+    <Testimonials lang={lang} client:load />
+    <FAQ lang={lang} client:load />
+    <FinalCTA lang={lang} />
+  </main>
+
+  <Footer lang={lang} />
+  <WhatsAppFAB lang={lang} />
+  <NewsletterModal lang={lang} client:load />
+</Layout>
+
