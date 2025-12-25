@@ -55,6 +55,31 @@
     "copyright": "© 2025 Profe Chill. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "methodology": {
+    "title": "Improve your business communication skills",
+    "title2": "Master technical vocabulary in your industry"
+  },
+  "classMethodology": {
+    "lessonCard": 
+    [
+      {
+        "path": "/lessons/real_communication.png",
+        "title": "Communication Practice"
+      },
+      {
+        "path": "/lessons/phonetics.png",
+        "title": "Phonetics Coaching"
+      },
+      {
+        "path": "/lessons/learning_strategies.png",
+        "title": "Independent Learning Strategies"
+      },
+      {
+        "path": "/lessons/student_interest.png",
+        "title": "Student Interest"
+      }
+    ]
   }
 }
 

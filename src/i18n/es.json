@@ -55,6 +55,31 @@
     "copyright": "© 2025 Profe Chill. Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio"
+  },
+  "methodology": {
+    "title": "Mejora tus habilidades de comunicación empresarial",
+    "title2": "Domina el vocabulario técnico de tu industria"
+  },
+  "classMethodology": {
+    "lessonCard": 
+    [
+      {
+        "path": "public/lessons/real_communication.png",
+        "title": "Práctica de Comunicación"
+      },
+      {
+        "path": "public/lessons/phonetics.png",
+        "title": "Coaching de Fonética"
+      },
+      {
+        "path": "public/lessons/learning_strategies.png",
+        "title": "Estrategias de Aprendizaje Independiente"
+      },
+      {
+        "path": "public/lessons/student_interest.png",
+        "title": "Interés del Estudiante"
+      }
+    ]
   }
 }
 

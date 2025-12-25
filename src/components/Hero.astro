@@ -1,5 +1,6 @@
 ---
 import { useTranslations } from '../utils/i18n';
+import BookConsultationButton from './BookConsultationButton';
 
 interface Props {
   lang: 'en' | 'es';
@@ -32,12 +33,7 @@ const t = useTranslations(lang);
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a 
-            href="#contact"
-            class="group px-8 py-4 bg-brand-sky-blue hover:bg-brand-sky-blue/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center"
-          >
-            {t('hero.ctaPrimary')}
-          </a>
+          <BookConsultationButton lang={lang} />
           
           <a 
             href="#about"
@@ -65,21 +61,4 @@ const t = useTranslations(lang);
     </div>
   </div>
 </section>
-
-<style>
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-in {
-    animation: fade-in 1s ease-out;
-  }
-</style>
 

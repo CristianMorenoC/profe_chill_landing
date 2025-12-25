@@ -48,16 +48,6 @@ export default function HowItWorks({ lang }: Props) {
     title: 'How My Lessons Work',
     sections: [
       {
-        title: 'A Fully Tailored Learning Experience',
-        content: (
-          <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-            <li>• Every lesson built around real needs</li>
-            <li>• Content adapts to your life, time, and goals</li>
-            <li>• Faster learning by studying only what matters</li>
-          </ul>
-        ),
-      },
-      {
         title: 'What We Do in Class',
         content: (
           <div className="space-y-4">
@@ -149,16 +139,6 @@ export default function HowItWorks({ lang }: Props) {
   } : {
     title: 'Cómo Funcionan Mis Clases',
     sections: [
-      {
-        title: 'Una Experiencia de Aprendizaje Totalmente Personalizada',
-        content: (
-          <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-            <li>• Cada lección construida alrededor de necesidades reales</li>
-            <li>• El contenido se adapta a tu vida, tiempo y objetivos</li>
-            <li>• Aprendizaje más rápido estudiando solo lo que importa</li>
-          </ul>
-        ),
-      },
       {
         title: 'Qué Hacemos en Clase',
         content: (

@@ -13,6 +13,8 @@ import FinalCTA from '../../components/FinalCTA.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFAB from '../../components/WhatsAppFAB.astro';
 import NewsletterModal from '../../components/NewsletterModal';
+import { Methodology } from '../../components/Methodology';
+import { Lessons } from '../../components/Lessons';
 
 const lang = 'en';
 ---
@@ -26,10 +28,12 @@ const lang = 'en';
   <Header lang={lang} />
   
   <main>
+    <Methodology lang={lang} client:load />
     <Hero lang={lang} />
     <ValueProposition lang={lang} />
     <About lang={lang} />
     <HowItWorks lang={lang} client:load />
+    <Lessons lang={lang} client:load />
     <CorporateFocus lang={lang} />
     <Stats lang={lang} client:load />
     <Testimonials lang={lang} client:load />
