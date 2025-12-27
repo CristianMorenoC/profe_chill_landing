@@ -42,9 +42,9 @@ export default function NewsletterModal({ lang }: Props) {
   useEffect(() => {
     const openButton = document.getElementById('open-newsletter');
     const handleOpen = () => setIsOpen(true);
-    
+
     openButton?.addEventListener('click', handleOpen);
-    
+
     return () => {
       openButton?.removeEventListener('click', handleOpen);
     };
@@ -91,7 +91,7 @@ export default function NewsletterModal({ lang }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-[1200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
       onClick={() => setIsOpen(false)}
     >
       <div

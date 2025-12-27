@@ -2,8 +2,6 @@
   "nav": {
     "benefits": "Benefits",
     "about": "About",
-    "howItWorks": "How It Works",
-    "corporateFocus": "Corporate Focus",
     "experience": "Experience",
     "testimonials": "Testimonials",
     "faq": "FAQ",
@@ -61,8 +59,7 @@
     "title2": "Master technical vocabulary in your industry"
   },
   "classMethodology": {
-    "lessonCard": 
-    [
+    "lessonCard": [
       {
         "path": "/lessons/real_communication.png",
         "title": "Communication Practice"
@@ -82,4 +79,3 @@
     ]
   }
 }
-

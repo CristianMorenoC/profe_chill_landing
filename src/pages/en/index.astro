@@ -1,22 +1,20 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Hero from '../../components/Hero.astro';
-import ValueProposition from '../../components/ValueProposition.astro';
-import About from '../../components/About.astro';
-import HowItWorks from '../../components/HowItWorks';
-import CorporateFocus from '../../components/CorporateFocus.astro';
-import Stats from '../../components/Stats';
-import Testimonials from '../../components/Testimonials';
-import FAQ from '../../components/FAQ';
-import FinalCTA from '../../components/FinalCTA.astro';
-import Footer from '../../components/Footer.astro';
-import WhatsAppFAB from '../../components/WhatsAppFAB.astro';
-import NewsletterModal from '../../components/NewsletterModal';
-import { Methodology } from '../../components/Methodology';
-import { Lessons } from '../../components/Lessons';
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import ValueProposition from "../../components/ValueProposition.astro";
+import About from "../../components/About.astro";
+import Stats from "../../components/Stats";
+import Testimonials from "../../components/Testimonials";
+import FAQ from "../../components/FAQ";
+import FinalCTA from "../../components/FinalCTA.astro";
+import Footer from "../../components/Footer.astro";
+import WhatsAppFAB from "../../components/WhatsAppFAB.astro";
+import NewsletterModal from "../../components/NewsletterModal";
+import { Methodology } from "../../components/Methodology";
+import { Lessons } from "../../components/Lessons";
 
-const lang = 'en';
+const lang = "en";
 ---
 
 <Layout
@@ -26,15 +24,13 @@ const lang = 'en';
   keywords="spanish corporate trainer, spanish tutor, spanish teacher, spanish professor, corporate spanish lessons, executive spanish training"
 >
   <Header lang={lang} />
-  
+
   <main>
     <Methodology lang={lang} client:load />
     <Hero lang={lang} />
     <ValueProposition lang={lang} />
     <About lang={lang} />
-    <HowItWorks lang={lang} client:load />
     <Lessons lang={lang} client:load />
-    <CorporateFocus lang={lang} />
     <Stats lang={lang} client:load />
     <Testimonials lang={lang} client:load />
     <FAQ lang={lang} client:load />
@@ -45,4 +41,3 @@ const lang = 'en';
   <WhatsAppFAB lang={lang} />
   <NewsletterModal lang={lang} client:load />
 </Layout>
-

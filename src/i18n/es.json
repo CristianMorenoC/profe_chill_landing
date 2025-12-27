@@ -2,8 +2,6 @@
   "nav": {
     "benefits": "Beneficios",
     "about": "Acerca de",
-    "howItWorks": "Cómo Funciona",
-    "corporateFocus": "Enfoque Corporativo",
     "experience": "Experiencia",
     "testimonials": "Testimonios",
     "faq": "Preguntas",
@@ -61,8 +59,7 @@
     "title2": "Domina el vocabulario técnico de tu industria"
   },
   "classMethodology": {
-    "lessonCard": 
-    [
+    "lessonCard": [
       {
         "path": "public/lessons/real_communication.png",
         "title": "Práctica de Comunicación"
@@ -82,4 +79,3 @@
     ]
   }
 }
-
