@@ -4,7 +4,6 @@ interface LessonCardProps {
   path: string;
   title: string;
   index: number;
-  mousePos: { x: number, y: number };
   scrollProgress: number; // Progress of THIS card dismissing
   activeProgress: number; // Progress of THIS card becoming the top one
   isPast: boolean;
@@ -15,7 +14,6 @@ export const LessonCard = ({
   path,
   title,
   index,
-  mousePos,
   scrollProgress,
   activeProgress,
   isPast,
@@ -27,6 +25,9 @@ export const LessonCard = ({
   const [opacity, setOpacity] = useState(0);
 
   // Capture geometry once on mount/resize
+  const [slideDistance, setSlideDistance] = useState(800);
+  const stackOffset = 20;
+
   useEffect(() => {
     const updateGeometry = () => {
       if (cardRef.current) {
@@ -53,18 +54,7 @@ export const LessonCard = ({
   const handleMouseEnter = () => setOpacity(1);
   const handleMouseLeave = () => setOpacity(1);
 
-  // Physics for Shadow/Spotlight
-  const dampening = 20;
-  const shadowX = (cardState.x - mousePos.x) / dampening;
-  const shadowY = (cardState.y - mousePos.y) / dampening;
-
-  const spotlightX = mousePos.x - (cardState.x - cardState.width / 2);
-  const spotlightY = mousePos.y - (cardState.y - cardState.height / 2);
-
-  // Animation Logic
-  const [slideDistance, setSlideDistance] = useState(800);
-  const stackOffset = 20;
-
+  // Capture geometry once on mount/resize
   useEffect(() => {
     const handleResize = () => {
       setSlideDistance(window.innerHeight * 0.8);
@@ -106,10 +96,7 @@ export const LessonCard = ({
       className={`card w-[90%] md:w-[70%] h-[70%] absolute left-1/2 rounded-3xl overflow-hidden border border-white/10 dark:border-slate-800 bg-white/80 dark:bg-slate-900/90 backdrop-blur-sm will-change-transform ${isPast ? 'pointer-events-none' : ''}`}
       style={{
         transition: 'opacity 0.3s ease-out, transform 0.1s ease-out',
-        boxShadow: isPast ? 'none' : `
-          ${shadowX}px ${shadowY}px 40px rgba(0,0,0,0.25),
-          0 0 0 1px rgba(0,0,0,0.05)
-        `,
+        boxShadow: isPast ? 'none' : '0 8px 30px rgba(0,0,0,0.12)',
         transform: `
           translateX(-50%)
           translateY(${translateY}px)
@@ -120,22 +107,6 @@ export const LessonCard = ({
         opacity: Math.max(cardOpacity, 0),
       }}
     >
-      <div
-        className="pointer-events-none absolute -inset-px transition-opacity duration-300"
-        style={{
-          opacity,
-          background: `radial-gradient(100px circle at ${spotlightX}px ${spotlightY}px, rgba(255,255,255,0.4), transparent 40%)`,
-        }}
-      />
-
-      <div
-        className="pointer-events-none absolute -inset-px transition-opacity duration-300 dark:block hidden"
-        style={{
-          opacity,
-          background: `radial-gradient(100px circle at ${spotlightX}px ${spotlightY}px, rgba(147, 188, 252, 0.1), transparent 40%)`,
-        }}
-      />
-
       <div className="absolute top-6 left-6 z-10">
         <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white bg-white/50 dark:bg-black/30 backdrop-blur-md px-4 py-2 rounded-xl">
           {title}

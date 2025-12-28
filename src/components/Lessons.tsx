@@ -5,15 +5,10 @@ import '../styles/lessonStyles.css';
 
 export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
   const t = useTranslations(lang);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollProgress, setScrollProgress] = useState(0);
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setMousePos({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-    }
-
     const handleScroll = () => {
       if (!containerRef.current) return;
 
@@ -41,10 +36,6 @@ export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    setMousePos({ x: e.clientX, y: e.clientY });
-  };
-
   const lessonCards = t('classMethodology.lessonCard');
   const lessonsArray = Array.isArray(lessonCards) ? lessonCards : [];
   const numCards = lessonsArray.length;
@@ -54,24 +45,11 @@ export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
   return (
     <section
       ref={containerRef}
-      onMouseMove={handleMouseMove}
       className="relative"
       style={{ height: `${numCards * 100}vh` }}
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden from-slate-900 from-brand-beige/30 to-white dark:bg-slate-900">
+      <div className="sticky top-0 h-screen w-full overflow-hidden bg-transparent">
         <div className="absolute inset-0 pointer-events-none transition-colors duration-500">
-          <div
-            className="absolute inset-0 opacity-100 dark:opacity-0 transition-opacity duration-0"
-            style={{
-              background: `radial-gradient(circle 600px at ${mousePos.x}px ${mousePos.y}px, rgba(255,255,255,0.8), transparent)`
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-0"
-            style={{
-              background: `radial-gradient(circle 800px at ${mousePos.x}px ${mousePos.y}px, rgba(147, 188, 252, 0.15), transparent)`
-            }}
-          />
         </div>
 
         <div className="container relative mx-auto px-4 h-full flex flex-col items-center justify-center" id="lessons">
@@ -114,7 +92,6 @@ export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
                   path={lesson.path}
                   title={lesson.title}
                   index={index}
-                  mousePos={mousePos}
                   scrollProgress={localDismissalProgress}
                   activeProgress={activeProgress}
                   isPast={isPast}
