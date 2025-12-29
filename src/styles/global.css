@@ -59,4 +59,65 @@
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+
+  /* Aurora Animations */
+  @keyframes aurora-1 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+      transform: translate(10%, 10%) scale(1.1);
+    }
+
+    66% {
+      transform: translate(-5%, 15%) scale(0.9);
+    }
+  }
+
+  @keyframes aurora-2 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1.1);
+    }
+
+    33% {
+      transform: translate(-15%, 5%) scale(0.9);
+    }
+
+    66% {
+      transform: translate(10%, -10%) scale(1);
+    }
+  }
+
+  @keyframes aurora-3 {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(0.9);
+    }
+
+    33% {
+      transform: translate(5%, -15%) scale(1.1);
+    }
+
+    66% {
+      transform: translate(15%, 5%) scale(1);
+    }
+  }
+
+  .animate-aurora-1 {
+    animation: aurora-1 20s infinite alternate ease-in-out;
+  }
+
+  .animate-aurora-2 {
+    animation: aurora-2 25s infinite alternate ease-in-out;
+  }
+
+  .animate-aurora-3 {
+    animation: aurora-3 18s infinite alternate ease-in-out;
+  }
 }
