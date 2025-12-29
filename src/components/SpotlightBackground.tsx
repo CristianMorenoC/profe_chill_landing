@@ -14,12 +14,16 @@ export const SpotlightBackground: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Aurora Orbs */}
-      <div className="absolute inset-0 opacity-40 dark:opacity-20 transition-opacity duration-700">
-        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-brand-sky-blue/30 blur-[120px] animate-aurora-1" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-brand-orange/20 blur-[120px] animate-aurora-2" />
-        <div className="absolute top-[20%] right-[-5%] w-[50%] h-[50%] rounded-full bg-brand-sky-blue/20 blur-[100px] animate-aurora-3" />
-      </div>
+      {/* Cyber Grid Pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.07] transition-opacity duration-700"
+        style={{
+          backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
+          backgroundSize: '40px 40px',
+          maskImage: `radial-gradient(circle 500px at ${mousePos.x}px ${mousePos.y}px, black, transparent)`,
+          WebkitMaskImage: `radial-gradient(circle 500px at ${mousePos.x}px ${mousePos.y}px, black, transparent)`
+        }}
+      />
 
       {/* Light Mode Spotlight */}
       <div
