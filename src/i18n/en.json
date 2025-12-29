@@ -57,24 +57,25 @@
   },
   "methodology": {
     "title": "Improve your business communication skills",
-    "title2": "Master technical vocabulary in your industry"
+    "title2": "Master technical vocabulary in your industry",
+    "title3": "Learning the local language turns a tourist into a traveler, opening doors to authentic experiences."
   },
   "classMethodology": {
     "lessonCard": [
       {
-        "path": "/lessons/real_communication.png",
+        "path": "/lessons/real_communication.webp",
         "title": "Communication Practice"
       },
       {
-        "path": "/lessons/phonetics.png",
+        "path": "/lessons/phonetics.webp",
         "title": "Phonetics Coaching"
       },
       {
-        "path": "/lessons/learning_strategies.png",
+        "path": "/lessons/learning_strategies.webp",
         "title": "Independent Learning Strategies"
       },
       {
-        "path": "/lessons/student_interest.png",
+        "path": "/lessons/student_interest.webp",
         "title": "Student Interest"
       }
     ]

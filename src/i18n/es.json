@@ -57,24 +57,25 @@
   },
   "methodology": {
     "title": "Mejora tus habilidades de comunicación empresarial",
-    "title2": "Domina el vocabulario técnico de tu industria"
+    "title2": "Domina el vocabulario técnico de tu industria",
+    "title3": "Aprender el idioma local transforma a un turista en un viajero, abriendo las puertas a experiencias auténticas."
   },
   "classMethodology": {
     "lessonCard": [
       {
-        "path": "/lessons/real_communication.png",
+        "path": "/lessons/real_communication.webp",
         "title": "Práctica de Comunicación"
       },
       {
-        "path": "/lessons/phonetics.png",
+        "path": "/lessons/phonetics.webp",
         "title": "Coaching de Fonética"
       },
       {
-        "path": "/lessons/learning_strategies.png",
+        "path": "/lessons/learning_strategies.webp",
         "title": "Estrategias de Aprendizaje Independiente"
       },
       {
-        "path": "/lessons/student_interest.png",
+        "path": "/lessons/student_interest.webp",
         "title": "Interés del Estudiante"
       }
     ]
