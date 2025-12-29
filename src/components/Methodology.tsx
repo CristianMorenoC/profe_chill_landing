@@ -26,20 +26,20 @@ export const Methodology: React.FC<Props> = ({ lang }) => {
       const container = containerRef.current;
       const rect = container.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      
+
       const scrolledIntoContainer = -rect.top;
       const totalScrollableHeight = container.offsetHeight - viewportHeight;
-      
+
       const overallProgress = Math.max(0, Math.min(1, scrolledIntoContainer / totalScrollableHeight));
-      
+
       const progressPerVideo = 1 / videos.length;
       const videoIndex = Math.min(
         videos.length - 1,
         Math.floor(overallProgress / progressPerVideo)
       );
-      
+
       const progressWithinVideo = (overallProgress - (videoIndex * progressPerVideo)) / progressPerVideo;
-      
+
       setCurrentVideoIndex(videoIndex);
       setVideoProgress(Math.max(0, Math.min(1, progressWithinVideo)));
     };
@@ -98,29 +98,29 @@ export const Methodology: React.FC<Props> = ({ lang }) => {
   const titleKey = currentVideoIndex === 0 ? 'methodology.title' : 'methodology.title2';
 
   return (
-    <div ref={containerRef} style={{ height: totalHeight }} className="relative">
+    <div id="methodology" ref={containerRef} style={{ height: totalHeight }} className="relative">
       {/* Sticky container that stays fixed while scrolling */}
       <div className="sticky top-0 w-screen h-screen overflow-hidden">
         {/* Video background */}
-        <video 
+        <video
           key={videos[currentVideoIndex]}
-          src={videos[currentVideoIndex]} 
-          className="w-full h-full object-cover" 
-          autoPlay 
-          muted 
-          loop 
+          src={videos[currentVideoIndex]}
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
           playsInline
         />
-        
+
         {/* Overlay with dynamic opacity */}
-        <div 
+        <div
           className="absolute inset-0 flex items-center justify-center"
           style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})` }}
         >
           {/* Text content with scroll-driven position and fade */}
-          <div 
+          <div
             className="w-full md:w-[80%] lg:w-[70%] px-4 text-center"
-            style={{ 
+            style={{
               transform: `translateY(${textY}%)`,
               opacity: textOpacity,
               transition: 'transform 0.05s ease-out, opacity 0.05s ease-out'
