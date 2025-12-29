@@ -62,19 +62,19 @@
   "classMethodology": {
     "lessonCard": [
       {
-        "path": "/lessons/real_communication.png",
+        "path": "/lessons/real_communication.webp",
         "title": "Communication Practice"
       },
       {
-        "path": "/lessons/phonetics.png",
+        "path": "/lessons/phonetics.webp",
         "title": "Phonetics Coaching"
       },
       {
-        "path": "/lessons/learning_strategies.png",
+        "path": "/lessons/learning_strategies.webp",
         "title": "Independent Learning Strategies"
       },
       {
-        "path": "/lessons/student_interest.png",
+        "path": "/lessons/student_interest.webp",
         "title": "Student Interest"
       }
     ]
