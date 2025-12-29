@@ -77,7 +77,7 @@ export default function Testimonials({ lang }: Props) {
   return (
     <section
       id="testimonials"
-      className="py-20 bg-white dark:bg-slate-900"
+      className="py-20 bg-transparent"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -88,9 +88,9 @@ export default function Testimonials({ lang }: Props) {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Testimonial Card */}
-          <div className="bg-gradient-to-br from-brand-beige/30 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
+          <div className="bg-gradient-to-br from-brand-beige/30 to-white/80 dark:from-slate-800 dark:to-slate-800/50 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
             <Quote className="w-12 h-12 text-brand-sky-blue/30 mb-6" />
-            
+
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
               "{testimonials[currentIndex].text}"
             </p>
@@ -130,11 +130,10 @@ export default function Testimonials({ lang }: Props) {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentIndex
+                className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
                     ? 'bg-brand-sky-blue w-8'
                     : 'bg-gray-300 dark:bg-gray-600'
-                }`}
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}

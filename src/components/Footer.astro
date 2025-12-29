@@ -1,18 +1,20 @@
 ---
-import { Mail, Linkedin, Instagram, Facebook } from 'lucide-react';
-import { useTranslations } from '../utils/i18n';
-import LanguageSwitcher from './LanguageSwitcher';
-import DarkModeToggle from './DarkModeToggle';
+import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
+import { useTranslations } from "../utils/i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
+import DarkModeToggle from "./DarkModeToggle";
 
 interface Props {
-  lang: 'en' | 'es';
+  lang: "en" | "es";
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<footer class="bg-gray-900 dark:bg-black text-gray-300 border-t border-gray-800">
+<footer
+  class="bg-gray-900/90 dark:bg-black/80 backdrop-blur-md text-gray-300 border-t border-gray-800"
+>
   <div class="container mx-auto px-4 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <!-- About Column -->
@@ -24,54 +26,75 @@ const t = useTranslations(lang);
           Spanish Corporate Trainer • Multilingual • 10+ Years of Experience
         </p>
         <p class="text-sm text-gray-400">
-          {t('footer.tagline')}
+          {t("footer.tagline")}
         </p>
       </div>
 
       <!-- Quick Links -->
       <div>
         <h4 class="font-heading font-semibold text-white mb-4">
-          {t('footer.quickLinks')}
+          {t("footer.quickLinks")}
         </h4>
         <ul class="space-y-2 text-sm">
           <li>
-            <a href="#benefits" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.benefits')}
+            <a
+              href="#benefits"
+              class="hover:text-brand-sky-blue transition-colors"
+            >
+              {t("nav.benefits")}
             </a>
           </li>
           <li>
-            <a href="#about" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.about')}
+            <a
+              href="#about"
+              class="hover:text-brand-sky-blue transition-colors"
+            >
+              {t("nav.about")}
             </a>
           </li>
           <li>
-            <a href="#how-it-works" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.howItWorks')}
+            <a
+              href="#how-it-works"
+              class="hover:text-brand-sky-blue transition-colors"
+            >
+              {t("nav.howItWorks")}
             </a>
           </li>
           <li>
-            <a href="#corporate-focus" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.corporateFocus')}
+            <a
+              href="#corporate-focus"
+              class="hover:text-brand-sky-blue transition-colors"
+            >
+              {t("nav.corporateFocus")}
             </a>
           </li>
           <li>
-            <a href="#experience" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.experience')}
+            <a
+              href="#experience"
+              class="hover:text-brand-sky-blue transition-colors"
+            >
+              {t("nav.experience")}
             </a>
           </li>
           <li>
-            <a href="#testimonials" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.testimonials')}
+            <a
+              href="#testimonials"
+              class="hover:text-brand-sky-blue transition-colors"
+            >
+              {t("nav.testimonials")}
             </a>
           </li>
           <li>
             <a href="#faq" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.faq')}
+              {t("nav.faq")}
             </a>
           </li>
           <li>
-            <a href="#contact" class="hover:text-brand-sky-blue transition-colors">
-              {t('nav.contact')}
+            <a
+              href="#contact"
+              class="hover:text-brand-sky-blue transition-colors"
+            >
+              {t("nav.contact")}
             </a>
           </li>
         </ul>
@@ -80,22 +103,37 @@ const t = useTranslations(lang);
       <!-- Connect -->
       <div>
         <h4 class="font-heading font-semibold text-white mb-4">
-          {t('footer.connect')}
+          {t("footer.connect")}
         </h4>
         <div class="space-y-3 text-sm mb-6">
-          <a href="mailto:contact@profechill.com" class="flex items-center gap-2 hover:text-brand-sky-blue transition-colors">
+          <a
+            href="mailto:contact@profechill.com"
+            class="flex items-center gap-2 hover:text-brand-sky-blue transition-colors"
+          >
             <Mail className="w-4 h-4" />
             contact@profechill.com
           </a>
         </div>
         <div class="flex gap-4">
-          <a href="#" class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors" aria-label="LinkedIn">
+          <a
+            href="#"
+            class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors"
+            aria-label="LinkedIn"
+          >
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="#" class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors" aria-label="Instagram">
+          <a
+            href="#"
+            class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors"
+            aria-label="Instagram"
+          >
             <Instagram className="w-5 h-5" />
           </a>
-          <a href="#" class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors" aria-label="Facebook">
+          <a
+            href="#"
+            class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors"
+            aria-label="Facebook"
+          >
             <Facebook className="w-5 h-5" />
           </a>
         </div>
@@ -103,9 +141,11 @@ const t = useTranslations(lang);
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div
+      class="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4"
+    >
       <p class="text-sm text-gray-400">
-        {t('footer.copyright')}
+        {t("footer.copyright")}
       </p>
       <div class="flex items-center gap-4">
         <LanguageSwitcher currentLang={lang} client:load />
@@ -114,4 +154,3 @@ const t = useTranslations(lang);
     </div>
   </div>
 </footer>
-

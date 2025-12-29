@@ -1,71 +1,108 @@
 ---
-import { Target, Briefcase, Globe, TrendingUp } from 'lucide-react';
-import { useTranslations } from '../utils/i18n';
+import { Target, Briefcase, Globe, TrendingUp } from "lucide-react";
+import { useTranslations } from "../utils/i18n";
 
 interface Props {
-  lang: 'en' | 'es';
+  lang: "en" | "es";
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section id="benefits" class="py-20 bg-white dark:bg-slate-900 overflow-hidden">
+<section id="benefits" class="py-20 bg-transparent overflow-hidden">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 dark:text-white mb-12">
-      {t('valueProps.title')}
+    <h2
+      class="text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 dark:text-white mb-12"
+    >
+      {t("valueProps.title")}
     </h2>
 
-    <div id="benefits-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div
+      id="benefits-grid"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+    >
       <!-- Personalized Curriculum -->
-      <div class="benefit-card group p-8 bg-gradient-to-br from-brand-beige/50 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700" style="--delay: 0.5s;">
-        <div class="w-16 h-16 bg-brand-sky-blue/20 dark:bg-brand-sky-blue/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+      <div
+        class="benefit-card group p-8 bg-gradient-to-br from-brand-beige/50 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700"
+        style="--delay: 0.5s;"
+      >
+        <div
+          class="w-16 h-16 bg-brand-sky-blue/20 dark:bg-brand-sky-blue/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+        >
           <Target className="w-8 h-8 text-brand-sky-blue" />
         </div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4">
-          {t('valueProps.personalizedTitle')}
+        <h3
+          class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4"
+        >
+          {t("valueProps.personalizedTitle")}
         </h3>
         <p class="text-gray-700 dark:text-gray-300">
-          {t('valueProps.personalizedText')}
+          {t("valueProps.personalizedText")}
         </p>
       </div>
 
       <!-- Corporate Focus -->
-      <div class="benefit-card group p-8 bg-gradient-to-br from-brand-light-green/30 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700" style="--delay: 0.7s;">
-        <div class="w-16 h-16 bg-brand-light-green/30 dark:bg-brand-light-green/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-          <Briefcase className="w-8 h-8 text-brand-light-green dark:text-brand-light-green" />
+      <div
+        class="benefit-card group p-8 bg-gradient-to-br from-brand-light-green/30 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700"
+        style="--delay: 0.7s;"
+      >
+        <div
+          class="w-16 h-16 bg-brand-light-green/30 dark:bg-brand-light-green/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+        >
+          <Briefcase
+            className="w-8 h-8 text-brand-light-green dark:text-brand-light-green"
+          />
         </div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4">
-          {t('valueProps.corporateTitle')}
+        <h3
+          class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4"
+        >
+          {t("valueProps.corporateTitle")}
         </h3>
         <p class="text-gray-700 dark:text-gray-300">
-          {t('valueProps.corporateText')}
+          {t("valueProps.corporateText")}
         </p>
       </div>
 
       <!-- Multilingual Teaching -->
-      <div class="benefit-card group p-8 bg-gradient-to-br from-brand-gold/20 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700" style="--delay: 0.8s;">
-        <div class="w-16 h-16 bg-brand-gold/30 dark:bg-brand-gold/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+      <div
+        class="benefit-card group p-8 bg-gradient-to-br from-brand-gold/20 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700"
+        style="--delay: 0.8s;"
+      >
+        <div
+          class="w-16 h-16 bg-brand-gold/30 dark:bg-brand-gold/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+        >
           <Globe className="w-8 h-8 text-brand-gold dark:text-brand-gold" />
         </div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4">
-          {t('valueProps.multilingualTitle')}
+        <h3
+          class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4"
+        >
+          {t("valueProps.multilingualTitle")}
         </h3>
         <p class="text-gray-700 dark:text-gray-300">
-          {t('valueProps.multilingualText')}
+          {t("valueProps.multilingualText")}
         </p>
       </div>
 
       <!-- Results-Oriented -->
-      <div class="benefit-card group p-8 bg-gradient-to-br from-brand-orange/20 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700" style="--delay: 1.0s;">
-        <div class="w-16 h-16 bg-brand-orange/30 dark:bg-brand-orange/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-          <TrendingUp className="w-8 h-8 text-brand-orange dark:text-brand-orange" />
+      <div
+        class="benefit-card group p-8 bg-gradient-to-br from-brand-orange/20 to-white dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700"
+        style="--delay: 1.0s;"
+      >
+        <div
+          class="w-16 h-16 bg-brand-orange/30 dark:bg-brand-orange/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+        >
+          <TrendingUp
+            className="w-8 h-8 text-brand-orange dark:text-brand-orange"
+          />
         </div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4">
-          {t('valueProps.resultsTitle')}
+        <h3
+          class="text-xl font-heading font-semibold text-gray-900 dark:text-white mb-4"
+        >
+          {t("valueProps.resultsTitle")}
         </h3>
         <p class="text-gray-700 dark:text-gray-300">
-          {t('valueProps.resultsText')}
+          {t("valueProps.resultsText")}
         </p>
       </div>
     </div>
@@ -77,7 +114,9 @@ const t = useTranslations(lang);
     .benefit-card {
       transform: translateX(-200%);
       opacity: 0;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+      transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.5s ease;
       transition-delay: var(--delay, 0s);
     }
 
@@ -89,23 +128,22 @@ const t = useTranslations(lang);
 </style>
 
 <script>
-  const grid = document.getElementById('benefits-grid');
+  const grid = document.getElementById("benefits-grid");
 
   if (grid) {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          grid.classList.add('is-visible');
+          grid.classList.add("is-visible");
           observer.unobserve(entry.target);
         }
       },
       {
         threshold: 0.5,
-      }
+      },
     );
 
     observer.observe(grid);
   }
 </script>
-

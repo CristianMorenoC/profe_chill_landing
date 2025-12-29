@@ -37,9 +37,9 @@ function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       setCount(Math.floor(progress * end));
-      
+
       if (progress < 1) {
         requestAnimationFrame(animate);
       }
@@ -71,7 +71,7 @@ export default function Stats({ lang }: Props) {
   };
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-r from-brand-sky-blue/10 via-brand-light-green/10 to-brand-gold/10 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <section id="experience" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 dark:text-white mb-12">
           {content.title}
@@ -81,7 +81,7 @@ export default function Stats({ lang }: Props) {
           {content.stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border border-gray-200 dark:border-gray-700"
+              className="text-center p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border border-gray-200 dark:border-gray-700"
             >
               <div className="text-4xl md:text-5xl font-heading font-bold text-brand-sky-blue mb-2 flex items-center justify-center">
                 <CountUp end={stat.value} />

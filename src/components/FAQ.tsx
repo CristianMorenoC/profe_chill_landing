@@ -12,24 +12,22 @@ interface FAQItem {
 
 function FAQAccordion({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden backdrop-blur-sm">
       <button
         onClick={onToggle}
-        className="w-full px-6 py-4 flex items-center justify-between bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors text-left"
+        className="w-full px-6 py-4 flex items-center justify-between bg-white/80 dark:bg-slate-800/80 hover:bg-gray-50/90 dark:hover:bg-slate-700/90 transition-colors text-left"
       >
         <h3 className="text-lg font-heading font-semibold text-gray-900 dark:text-white pr-4">
           {item.question}
         </h3>
         <ChevronDown
-          className={`w-5 h-5 text-brand-sky-blue flex-shrink-0 transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : ''
-          }`}
+          className={`w-5 h-5 text-brand-sky-blue flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+            }`}
         />
       </button>
       <div
-        className={`transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96' : 'max-h-0'
-        }`}
+        className={`transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'
+          }`}
       >
         <div className="px-6 py-4 bg-gray-50 dark:bg-slate-900/50">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -120,7 +118,7 @@ export default function FAQ({ lang }: Props) {
   );
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-white to-brand-beige/30 dark:from-slate-900 dark:to-slate-800">
+    <section id="faq" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 dark:text-white mb-4">
           {lang === 'en' ? 'Frequently Asked Questions' : 'Preguntas Frecuentes'}
