@@ -7,55 +7,97 @@ interface Props {
 
 interface Testimonial {
   name: string;
+  role: string;
+  rating: number;
   text: string;
-  photo?: string;
+  image: string;
 }
 
 export default function Testimonials({ lang }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const testimonials: Testimonial[] = lang === 'en' ? [
+  const testimonials: Testimonial[] = [
     {
-      name: 'Silvia Andrade',
-      text: "Taking classes with Juan Diego to improve my language skills has been one of the best decisions I've made at this point in my life. The support, the dynamic of the classes, the availability of schedules, the guides we've worked with—all of this together has allowed me to get closer and closer to achieving my goal.",
+      name: "Lady B",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "Quality, flexibility, and excellent teaching are the hallmarks of Juan Diego. Thank you for contributing to this future, and thank you for your professional support and wonderful guidance. Juan is 100% recommended."
+        : "Calidad, flexibilidad y excelente enseñanza son los sellos distintivos de Juan Diego. Gracias por contribuir a este futuro, y gracias por su apoyo profesional y maravillosa guía. Juan es 100% recomendado.",
+      image: "/reviews/ladyb.webp",
     },
     {
-      name: 'Lina Rodriguez',
-      text: 'I especially like that he covers all aspects of the language: grammar, pronunciation, reading, and writing, adapting to each student\'s weaknesses and needs. I also appreciate how he focuses on what I like and what I need for my career. His classes are comprehensive, flexible, student-centered, and very practical.',
+      name: "Dwayne",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "Juan Diego is a great teacher who enjoy offering his vast knowledge of the Spanish language to cater the lesson to your specific needs. For me a speaker of Italian we are able to curate parallelisms between both of these two languages to find a effective ease of access. I have been taking lessons with Juan 2-3 times a week and we have been flying through grammar and some literature."
+        : "Juan Diego es un gran profesor que disfruta ofreciendo su vasto conocimiento del idioma español para adaptar la lección a tus necesidades específicas. Para mí, que hablo italiano, podemos crear paralelismos entre ambos idiomas para encontrar una facilidad de acceso efectiva. He tomado clases con Juan 2-3 veces por semana y hemos avanzado rápido en gramática y algo de literatura.",
+      image: "/reviews/dwayne.webp",
     },
     {
-      name: 'Jonathan Coy',
-      text: 'The classes with Profe-Chill are exceptional, tailored to what you want to improve, and with a very pleasant atmosphere that helps you relax and learn in the best way possible, without pressure and always striving to improve.',
+      name: "Henrique",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "Highly recommended! I have the privilege of receiving Spanish lessons from this exceptional teacher. Their approach with interactive classes truly makes language learning a unique experience. Thanks to their guidance and support, I am achieving my language goals effectively."
+        : "¡Altamente recomendado! Tengo el privilegio de recibir clases de español de este profesor excepcional. Su enfoque con clases interactivas realmente hace que el aprendizaje del idioma sea una experiencia única. Gracias a su guía y apoyo, estoy logrando mis objetivos lingüísticos de manera efectiva.",
+      image: "/reviews/henrique.webp",
     },
     {
-      name: 'German Lancheros (75 years old)',
-      text: 'At 75 years old, as we were planning a trip to visit our daughter, I wanted to improve my English. After 36 personalized lessons, I am now in Melbourne and have been able to socialize with my family in English. When I return to Colombia, I will continue my classes.',
+      name: "Adam",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "Juan is an extremely patient and knowledgable teacher. The exercises are well tailored to my level and my limited time to study during the week. Thank you for all your help :)"
+        : "Juan es un profesor extremadamente paciente y conocedor. Los ejercicios están bien adaptados a mi nivel y a mi tiempo limitado para estudiar durante la semana. Gracias por toda tu ayuda :)",
+      image: "/reviews/adam.webp",
     },
     {
-      name: 'David Calderón',
-      text: 'I took personalized English classes with Juan Diego, Profe Chill, and from the beginning they felt different. The classes are totally adapted to you, without pressure and with lots of space to converse. This process allowed me to move easily abroad during work trips.',
-    },
-  ] : [
-    {
-      name: 'Silvia Andrade',
-      text: 'Tomar clases con Juan Diego para mejorar mis habilidades lingüísticas ha sido una de las mejores decisiones que he tomado en este punto de mi vida. El apoyo, la dinámica de las clases, la disponibilidad de horarios, las guías con las que hemos trabajado: todo esto junto me ha permitido acercarme cada vez más a lograr mi objetivo.',
-    },
-    {
-      name: 'Lina Rodriguez',
-      text: 'Me gusta especialmente que cubra todos los aspectos del idioma: gramática, pronunciación, lectura y escritura, adaptándose a las debilidades y necesidades de cada estudiante. También aprecio cómo se enfoca en lo que me gusta y lo que necesito para mi carrera. Sus clases son integrales, flexibles, centradas en el estudiante y muy prácticas.',
+      name: "Kathleen",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "Juan is a very friendly and professional Teacher. Highly recommended to everyone. He takes his time to explain you everything very well until you will understand it."
+        : "Juan es un profesor muy amable y profesional. Muy recomendado para todos. Se toma su tiempo para explicarte todo muy bien hasta que lo entiendas.",
+      image: "/reviews/kathleen.webp",
     },
     {
-      name: 'Jonathan Coy',
-      text: 'Las clases con Profe-Chill son excepcionales, adaptadas a lo que quieres mejorar, y con un ambiente muy agradable que te ayuda a relajarte y aprender de la mejor manera posible, sin presión y siempre esforzándote por mejorar.',
+      name: "Blair",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "Juan Diego is an excellent tutor. He relates to students meeting them where they are. Mastery of Spanish. Well prepared. Organized. Uses good teaching aids. Interesting. Recommend highly."
+        : "Juan Diego es un excelente tutor. Se relaciona con los estudiantes encontrándolos donde están. Dominio del español. Bien preparado. Organizado. Utiliza buenos materiales didácticos. Interesante. Lo recomiendo altamente.",
+      image: "/reviews/blair.webp",
     },
     {
-      name: 'German Lancheros (75 años)',
-      text: 'A los 75 años, mientras planeábamos un viaje para visitar a nuestra hija, quería mejorar mi inglés. Después de 36 lecciones personalizadas, ahora estoy en Melbourne y he podido socializar con mi familia en inglés. Cuando regrese a Colombia, continuaré mis clases.',
+      name: "John",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "¡Juan es muy excelente! Learning with him felt like talking to a friend of many years. He created a personalized slideshow for me and genuinely cares. If you're looking for someone who will meet you no matter your level in Spanish, learn with Juan!"
+        : "¡Juan es muy excelente! Aprender con él se sintió como hablar con un amigo de muchos años. Creó una presentación personalizada para mí y realmente le importa. Si buscas a alguien que te encuentre sin importar tu nivel de español, ¡aprende con Juan!",
+      image: "/reviews/John.webp",
     },
     {
-      name: 'David Calderón',
-      text: 'Tomé clases personalizadas de inglés con Juan Diego, Profe Chill, y desde el inicio se sintieron diferentes. Las clases son totalmente adaptadas a uno, sin presión y con muchísimo espacio para conversar. Este proceso me permitió moverme con facilidad en el exterior durante viajes de trabajo.',
+      name: "Lenka",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "My Spanish teacher, Juan Diego, is outstanding! He explains concepts clearly and creates a fun, engaging learning environment. His dedication and passion for teaching make every class enjoyable. Highly recommended!"
+        : "¡Mi profesor de español, Juan Diego, es sobresaliente! Explica los conceptos claramente y crea un ambiente de aprendizaje divertido y atractivo. Su dedicación y pasión por la enseñanza hacen que cada clase sea agradable. ¡Altamente recomendado!",
+      image: "/reviews/lenka.webp",
+    },
+    {
+      name: "Linda",
+      role: "Student",
+      rating: 5,
+      text: lang === 'en'
+        ? "I am a lucky girl; I found Juan Diego, an amazing Spanish teacher! Juan has identified the perfect mix of lessons for me, whether advanced grammar review or excerpts from 100 Years of Solitude. My classes are rigorous yet fun. What more can you ask for? Juan is the best!"
+        : "Soy una chica con suerte; ¡encontré a Juan Diego, un increíble profesor de español! Juan ha identificado la mezcla perfecta de lecciones para mí, ya sea revisión de gramática avanzada o extractos de 100 años de soledad. Mis clases son rigurosas pero divertidas. ¿Qué más se puede pedir? ¡Juan es el mejor!",
+      image: "/reviews/paula.webp",
     },
   ];
 
@@ -96,8 +138,12 @@ export default function Testimonials({ lang }: Props) {
             </p>
 
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-brand-sky-blue to-brand-light-green rounded-full flex items-center justify-center text-white font-bold text-xl">
-                {testimonials[currentIndex].name.charAt(0)}
+              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-sky-blue/20">
+                <img
+                  src={testimonials[currentIndex].image}
+                  alt={testimonials[currentIndex].name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <p className="font-heading font-semibold text-gray-900 dark:text-white text-lg">
@@ -131,8 +177,8 @@ export default function Testimonials({ lang }: Props) {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
-                    ? 'bg-brand-sky-blue w-8'
-                    : 'bg-gray-300 dark:bg-gray-600'
+                  ? 'bg-brand-sky-blue w-8'
+                  : 'bg-gray-300 dark:bg-gray-600'
                   }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
