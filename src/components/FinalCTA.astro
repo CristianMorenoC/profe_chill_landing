@@ -56,11 +56,13 @@ const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text
 
   <div class="container mx-auto px-4 relative z-10">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
+      <h2
+        class="text-3xl md:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-6"
+      >
         {content.heading}
       </h2>
 
-      <p class="text-xl md:text-2xl text-white/90 mb-12">
+      <p class="text-xl md:text-2xl text-gray-700 dark:text-white/90 mb-12">
         {content.subheading}
       </p>
 
@@ -94,7 +96,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text
 
       <button
         id="open-newsletter"
-        class="text-white/90 hover:text-white underline underline-offset-4 transition-colors"
+        class="text-gray-700 dark:text-white/90 hover:text-brand-sky-blue dark:hover:text-white underline underline-offset-4 transition-colors"
       >
         {content.ctaTertiary}
       </button>
