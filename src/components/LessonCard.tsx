@@ -93,7 +93,7 @@ export const LessonCard = ({
       ref={cardRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`card w-[90%] md:w-[70%] h-[70%] absolute left-1/2 rounded-3xl overflow-hidden border border-white/10 dark:border-slate-800 bg-white/80 dark:bg-slate-900/90 backdrop-blur-sm will-change-transform ${isPast ? 'pointer-events-none' : ''}`}
+      className={`card w-[90%] h-[70%] md:w-[85vw] md:h-[75vh] lg:w-[70vw] lg:h-[80vh] absolute left-1/2 rounded-3xl overflow-hidden border border-white/10 dark:border-slate-800 bg-white/80 dark:bg-slate-900/90 backdrop-blur-sm will-change-transform ${isPast ? 'pointer-events-none' : ''}`}
       style={{
         transition: 'opacity 0.3s ease-out, transform 0.1s ease-out',
         boxShadow: isPast ? 'none' : '0 8px 30px rgba(0,0,0,0.12)',
@@ -107,13 +107,7 @@ export const LessonCard = ({
         opacity: Math.max(cardOpacity, 0),
       }}
     >
-      <div className="absolute top-6 left-6 z-10">
-        <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white bg-white/50 dark:bg-black/30 backdrop-blur-md px-4 py-2 rounded-xl">
-          {title}
-        </h3>
-      </div>
-
-      <img id={`card-image-${index}`} src={`${path}`} alt={title} className={`card-image w-full h-full object-cover`} />
+      <img id={`card-image-${index}`} src={`${path}`} alt={title} className={`card-image w-full h-full object-contain`} />
     </div>
   )
 }
