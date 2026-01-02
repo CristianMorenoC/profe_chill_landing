@@ -48,16 +48,17 @@ export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
       className="relative"
       style={{ height: `${numCards * 100}vh` }}
     >
+      <div className="container relative mx-auto px-4 flex flex-col items-center justify-center pt-20 pb-10" id="lessons">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-center text-gray-900 dark:text-white leading-tight max-w-4xl">
+          {t('classMethodology.title')}
+        </h2>
+      </div>
+
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-transparent">
         <div className="absolute inset-0 pointer-events-none transition-colors duration-500">
         </div>
 
-        <div className="container relative mx-auto px-4 h-full flex flex-col items-center justify-center" id="lessons">
-          <div className='mt-10 mb-6'>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 dark:text-white">
-              Class Methodology
-            </h2>
-          </div>
+        <div className="container relative mx-auto px-4 h-full flex flex-col items-center justify-center">
 
           <div className="relative w-full max-w-4xl h-[60vh] flex items-center justify-center">
             {lessonsArray.map((lesson: { path: string, title: string }, index: number) => {

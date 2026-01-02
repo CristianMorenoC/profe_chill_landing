@@ -63,22 +63,23 @@
     "title4": "Master your degree, in Spanish."
   },
   "classMethodology": {
+    "title": "Learn faster with a curriculum built around you",
     "lessonCard": [
       {
         "path": "/lessons/real_communication.webp",
-        "title": "Communication Practice"
+        "title": "Communication without borders"
       },
       {
         "path": "/lessons/phonetics.webp",
-        "title": "Phonetics Coaching"
+        "title": "Speak like a local"
       },
       {
         "path": "/lessons/learning_strategies.webp",
-        "title": "Independent Learning Strategies"
+        "title": "Your personal learning toolkit"
       },
       {
         "path": "/lessons/student_interest.webp",
-        "title": "Student Interest"
+        "title": "Topics you actually care about"
       }
     ]
   }

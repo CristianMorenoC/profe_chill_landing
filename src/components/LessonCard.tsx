@@ -108,6 +108,15 @@ export const LessonCard = ({
       }}
     >
       <img id={`card-image-${index}`} src={`${path}`} alt={title} className={`card-image w-full h-full object-contain`} />
+
+      {/* Glassmorphism Title Overlay - Sticky to image bottom */}
+      <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-[90%] md:w-auto">
+        <div className="bg-white/30 dark:bg-black/40 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl px-6 py-4 text-center">
+          <h3 className="text-xl md:text-3xl font-heading font-bold text-gray-900 dark:text-white leading-tight">
+            {title}
+          </h3>
+        </div>
+      </div>
     </div>
   )
 }

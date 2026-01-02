@@ -63,22 +63,23 @@
     "title4": "Domina tu carrera, en inglés."
   },
   "classMethodology": {
+    "title": "Aprende rápido con un plan hecho a tu medida",
     "lessonCard": [
       {
         "path": "/lessons/real_communication.webp",
-        "title": "Práctica de Comunicación"
+        "title": "Comunicación sin fronteras"
       },
       {
         "path": "/lessons/phonetics.webp",
-        "title": "Coaching de Fonética"
+        "title": "Habla como un local"
       },
       {
         "path": "/lessons/learning_strategies.webp",
-        "title": "Estrategias de Aprendizaje Independiente"
+        "title": "Tu kit personal de aprendizaje"
       },
       {
         "path": "/lessons/student_interest.webp",
-        "title": "Interés del Estudiante"
+        "title": "Temas que realmente te importan"
       }
     ]
   }
