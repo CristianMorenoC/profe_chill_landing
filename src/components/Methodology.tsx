@@ -101,6 +101,13 @@ export const Methodology: React.FC<Props> = ({ lang }) => {
 
   return (
     <div id="methodology" ref={containerRef} style={{ height: totalHeight }} className="relative">
+      {/* Description Title Section */}
+      <div className="absolute top-0 left-0 w-full pt-20 pb-10 z-20 text-center px-4">
+        <h3 className="text-2xl md:text-3xl font-heading font-semibold text-gray-900 dark:text-white max-w-4xl mx-auto">
+          {t('methodology.description')}
+        </h3>
+      </div>
+
       {/* Sticky container that stays fixed while scrolling */}
       <div className="sticky top-0 w-screen h-screen overflow-hidden">
         {/* Video background */}
