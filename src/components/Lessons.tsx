@@ -22,9 +22,24 @@ export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
       const start = 0; // top of section touches top of viewport
       const end = -sectionHeight + viewportHeight;
 
+      // Add a buffer so the animation doesn't start immediately when the section hits the top
+      // This allows the user to see the first card fully before it starts fading
+      const buffer = viewportHeight * 0.3;
+
       let progress = 0;
       if (rect.top <= start) {
-        progress = (rect.top - start) / (end - start);
+        // Calculate raw scroll amount (positive value)
+        const scrolled = -(rect.top - start);
+
+        // Apply buffer: only start progress after scrolling past buffer
+        if (scrolled < buffer) {
+          progress = 0;
+        } else {
+          // Normalize progress over the remaining scrollable distance
+          const effectiveTotal = -(end - start) - buffer;
+          const effectiveScrolled = scrolled - buffer;
+          progress = effectiveScrolled / effectiveTotal;
+        }
       }
 
       setScrollProgress(Math.min(Math.max(progress, 0), 1));
