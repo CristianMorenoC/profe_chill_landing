@@ -101,10 +101,10 @@ export const Methodology: React.FC<Props> = ({ lang }) => {
   const titleKey = titleKeys[currentVideoIndex] || titleKeys[0];
 
   return (
-    <div id="methodology" ref={containerRef} style={{ height: totalHeight }} className="relative">
-      {/* Description Title Section */}
-      <div className="absolute top-0 left-0 w-full pt-20 pb-10 z-20 text-center px-4">
-        <h3 className="text-2xl md:text-3xl font-heading font-semibold text-gray-900 dark:text-white max-w-4xl mx-auto">
+    <div id="methodology" ref={containerRef} style={{ height: totalHeight }} className="relative bg-white dark:bg-slate-900">
+      {/* Static Description Title Section */}
+      <div className="w-full py-20 text-center px-4">
+        <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900 dark:text-white max-w-5xl mx-auto leading-tight">
           {t('methodology.description')}
         </h3>
       </div>
