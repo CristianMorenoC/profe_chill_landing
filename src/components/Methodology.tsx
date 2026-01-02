@@ -101,7 +101,7 @@ export const Methodology: React.FC<Props> = ({ lang }) => {
   const titleKey = titleKeys[currentVideoIndex] || titleKeys[0];
 
   return (
-    <div id="methodology" ref={containerRef} style={{ height: totalHeight }} className="relative bg-white dark:bg-slate-900">
+    <div id="methodology" ref={containerRef} style={{ height: totalHeight }} className="relative bg-transparent dark:bg-transparent">
       {/* Static Description Title Section */}
       <div className="w-full py-20 text-center px-4">
         <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900 dark:text-white max-w-5xl mx-auto leading-tight">
