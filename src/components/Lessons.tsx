@@ -43,67 +43,68 @@ export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
   const numTransitions = Math.max(numCards - 1, 1);
 
   return (
-    <section
-      ref={containerRef}
-      className="relative"
-      style={{ height: `${numCards * 100}vh` }}
-    >
-      <div className="container relative mx-auto px-4 flex flex-col items-center justify-center pt-20 pb-10" id="lessons">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-center text-gray-900 dark:text-white leading-tight max-w-4xl">
-          {t('classMethodology.title')}
-        </h2>
-      </div>
-
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-transparent">
-        <div className="absolute inset-0 pointer-events-none transition-colors duration-500">
+    <>
+      <section
+        ref={containerRef}
+        className="relative"
+        style={{ height: `${numCards * 100}vh` }}
+      >
+        <div className="container relative mx-auto px-4 flex flex-col items-center justify-center pt-20 pb-10" id="lessons">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-center text-gray-900 dark:text-white leading-tight max-w-4xl">
+            {t('classMethodology.title')}
+          </h2>
         </div>
 
-        <div className="container relative mx-auto px-4 h-full flex flex-col items-center justify-center">
+        <div className="sticky top-0 h-screen w-full overflow-hidden bg-transparent">
+          <div className="absolute inset-0 pointer-events-none transition-colors duration-500">
+          </div>
 
-          <div className="relative w-full max-w-4xl h-[60vh] flex items-center justify-center">
-            {lessonsArray.map((lesson: { path: string, title: string }, index: number) => {
-              // Calculate specific animation state for this card
-              const cardStep = 1 / numTransitions;
-              const cardStart = index * cardStep;
-              const cardEnd = (index + 1) * cardStep;
+          <div className="container relative mx-auto px-4 h-full flex flex-col items-center justify-center">
 
-              // Local progress for THIS card (0 to 1) describing its dismissal
-              let localDismissalProgress = 0;
-              let isPast = false;
+            <div className="relative w-full max-w-4xl h-[60vh] flex items-center justify-center">
+              {lessonsArray.map((lesson: { path: string, title: string }, index: number) => {
+                // Calculate specific animation state for this card
+                const cardStep = 1 / numTransitions;
+                const cardStart = index * cardStep;
+                const cardEnd = (index + 1) * cardStep;
 
-              if (numTransitions > 0 && index < numTransitions) {
-                localDismissalProgress = (scrollProgress - cardStart) / cardStep;
-                localDismissalProgress = Math.min(Math.max(localDismissalProgress, 0), 1);
-                isPast = scrollProgress >= cardEnd;
-              }
+                // Local progress for THIS card (0 to 1) describing its dismissal
+                let localDismissalProgress = 0;
+                let isPast = false;
 
-              // How much has the PREVIOUS card been dismissed? 
-              // This is used to rotate the NEXT card to 0 degrees.
-              let activeProgress = 0;
-              if (index === 0) {
-                activeProgress = 1; // First card is active from the start
-              } else {
-                const prevCardStart = (index - 1) * cardStep;
-                activeProgress = Math.min(Math.max((scrollProgress - prevCardStart) / cardStep, 0), 1);
-              }
+                if (numTransitions > 0 && index < numTransitions) {
+                  localDismissalProgress = (scrollProgress - cardStart) / cardStep;
+                  localDismissalProgress = Math.min(Math.max(localDismissalProgress, 0), 1);
+                  isPast = scrollProgress >= cardEnd;
+                }
 
-              return (
-                <LessonCard
-                  key={index}
-                  path={lesson.path}
-                  title={lesson.title}
-                  index={index}
-                  scrollProgress={localDismissalProgress}
-                  activeProgress={activeProgress}
-                  isPast={isPast}
-                  totalCards={numCards}
-                />
-              );
-            })}
+                // How much has the PREVIOUS card been dismissed? 
+                // This is used to rotate the NEXT card to 0 degrees.
+                let activeProgress = 0;
+                if (index === 0) {
+                  activeProgress = 1; // First card is active from the start
+                } else {
+                  const prevCardStart = (index - 1) * cardStep;
+                  activeProgress = Math.min(Math.max((scrollProgress - prevCardStart) / cardStep, 0), 1);
+                }
+
+                return (
+                  <LessonCard
+                    key={index}
+                    path={lesson.path}
+                    title={lesson.title}
+                    index={index}
+                    scrollProgress={localDismissalProgress}
+                    activeProgress={activeProgress}
+                    isPast={isPast}
+                    totalCards={numCards}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };
