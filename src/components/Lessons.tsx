@@ -104,6 +104,7 @@ export const Lessons = ({ lang }: { lang: 'en' | 'es' }) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
