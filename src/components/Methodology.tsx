@@ -6,9 +6,10 @@ interface Props {
 }
 
 const videos = [
-  '/scrollytelling/Edición_de_video_eliminar_escena_de_puerta.mp4',
-  '/scrollytelling/Video_de_Ingeniero_McLaren_en_Taller.mp4',
+  '/scrollytelling/Video_Generation_Woman_at_Desk.mp4',
+  '/scrollytelling/Video_de_Ingeniero_F_Profechill.mp4',
   '/scrollytelling/Video_Correction_German_Tourist_in_Peru.mp4',
+  '/scrollytelling/Video_de_Estudiante_en_Harvard.mp4',
 ];
 
 export const Methodology: React.FC<Props> = ({ lang }) => {
@@ -96,7 +97,7 @@ export const Methodology: React.FC<Props> = ({ lang }) => {
   }
 
   // Get the title key for current video
-  const titleKeys = ['methodology.title', 'methodology.title2', 'methodology.title3'];
+  const titleKeys = ['methodology.title', 'methodology.title2', 'methodology.title3', 'methodology.title4'];
   const titleKey = titleKeys[currentVideoIndex] || titleKeys[0];
 
   return (
