@@ -1,5 +1,5 @@
 ---
-import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Mail, Linkedin, Instagram } from "lucide-react";
 import { useTranslations } from "../utils/i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 import DarkModeToggle from "./DarkModeToggle";
@@ -58,7 +58,7 @@ const t = useTranslations(lang);
           </li>
           <li>
             <a
-              href="#how-it-works"
+              href="#methodology"
               class="hover:text-brand-sky-blue transition-colors"
             >
               {t("nav.howItWorks")}
@@ -66,7 +66,7 @@ const t = useTranslations(lang);
           </li>
           <li>
             <a
-              href="#corporate-focus"
+              href="#benefits"
               class="hover:text-brand-sky-blue transition-colors"
             >
               {t("nav.corporateFocus")}
@@ -120,25 +120,22 @@ const t = useTranslations(lang);
         </div>
         <div class="flex gap-4">
           <a
-            href="#"
+            href="https://www.linkedin.com/in/juan-diego-gomez-71b7551b0/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/profe.chill?igsh=c3N4Z2UxNG1za3Zp"
+            target="_blank"
+            rel="noopener noreferrer"
             class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors"
             aria-label="Instagram"
           >
             <Instagram className="w-5 h-5" />
-          </a>
-          <a
-            href="#"
-            class="p-2 bg-gray-800 rounded-lg hover:bg-brand-sky-blue transition-colors"
-            aria-label="Facebook"
-          >
-            <Facebook className="w-5 h-5" />
           </a>
         </div>
       </div>
