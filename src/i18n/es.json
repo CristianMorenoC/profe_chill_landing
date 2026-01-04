@@ -84,5 +84,100 @@
         "title": "Temas que realmente te importan"
       }
     ]
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Los Estudiantes",
+    "items": [
+      {
+        "name": "Lady B",
+        "role": "Estudiante",
+        "text": "Calidad, flexibilidad y excelente enseñanza son los sellos distintivos de Juan Diego. Gracias por contribuir a este futuro, y gracias por su apoyo profesional y maravillosa guía. Juan es 100% recomendado.",
+        "image": "/reviews/ladyb.webp"
+      },
+      {
+        "name": "Dwayne",
+        "role": "Estudiante",
+        "text": "Juan Diego es un gran profesor que disfruta ofreciendo su vasto conocimiento del idioma español para adaptar la lección a tus necesidades específicas. Para mí, que hablo italiano, podemos crear paralelismos entre ambos idiomas para encontrar una facilidad de acceso efectiva. He tomado clases con Juan 2-3 veces por semana y hemos avanzado rápido en gramática y algo de literatura.",
+        "image": "/reviews/dwayne.webp"
+      },
+      {
+        "name": "Henrique",
+        "role": "Estudiante",
+        "text": "¡Altamente recomendado! Tengo el privilegio de recibir clases de español de este profesor excepcional. Su enfoque con clases interactivas realmente hace que el aprendizaje del idioma sea una experiencia única. Gracias a su guía y apoyo, estoy logrando mis objetivos lingüísticos de manera efectiva.",
+        "image": "/reviews/henrique.webp"
+      },
+      {
+        "name": "Adam",
+        "role": "Estudiante",
+        "text": "Juan es un profesor extremadamente paciente y conocedor. Los ejercicios están bien adaptados a mi nivel y a mi tiempo limitado para estudiar durante la semana. Gracias por toda tu ayuda :)",
+        "image": "/reviews/adam.webp"
+      },
+      {
+        "name": "Kathleen",
+        "role": "Estudiante",
+        "text": "Juan es un profesor muy amable y profesional. Muy recomendado para todos. Se toma su tiempo para explicarte todo muy bien hasta que lo entiendas.",
+        "image": "/reviews/kathleen.webp"
+      },
+      {
+        "name": "Blair",
+        "role": "Estudiante",
+        "text": "Juan Diego es un excelente tutor. Se relaciona con los estudiantes encontrándolos donde están. Dominio del español. Bien preparado. Organizado. Utiliza buenos materiales didácticos. Interesante. Lo recomiendo altamente.",
+        "image": "/reviews/blair.webp"
+      },
+      {
+        "name": "John",
+        "role": "Estudiante",
+        "text": "¡Juan es muy excelente! Aprender con él se sintió como hablar con un amigo de muchos años. Creó una presentación personalizada para mí y realmente le importa. Si buscas a alguien que te encuentre sin importar tu nivel de español, ¡aprende con Juan!",
+        "image": "/reviews/John.webp"
+      },
+      {
+        "name": "Lenka",
+        "role": "Estudiante",
+        "text": "¡Mi profesor de español, Juan Diego, es sobresaliente! Explica los conceptos claramente y crea un ambiente de aprendizaje divertido y atractivo. Su dedicación y pasión por la enseñanza hacen que cada clase sea agradable. ¡Altamente recomendado!",
+        "image": "/reviews/lenka.webp"
+      },
+      {
+        "name": "Linda",
+        "role": "Estudiante",
+        "text": "Soy una chica con suerte; ¡encontré a Juan Diego, un increíble profesor de español! Juan ha identificado la mezcla perfecta de lecciones para mí, ya sea revisión de gramática avanzada o extractos de 100 años de soledad. Mis clases son rigurosas pero divertidas. ¿Qué más se puede pedir? ¡Juan es el mejor!",
+        "image": "/reviews/paula.webp"
+      },
+      {
+        "name": "Patrick",
+        "role": "Estudiante",
+        "text": "Es difícil encontrar palabras que describan a un profesor tan increíble como Juan. Para empezar, Juan siempre se esmera en ser paciente mientras descubro lo que intento decir, ¡incluso si me tomo un poco de tiempo! También está verdaderamente dedicado a enseñar a sus alumnos al máximo. ¡Gracias por ser un gran maestro, Juan!",
+        "image": "/reviews/patrick.webp"
+      },
+      {
+        "name": "Silvia Andrade",
+        "role": "Estudiante",
+        "text": "Tomar clases con Juan Diego para mejorar mis habilidades lingüísticas ha sido una de las mejores decisiones que he tomado en este momento de mi vida. El apoyo, la dinámica de las clases, la disponibilidad de horarios, las guías con las que hemos trabajado—todo esto junto me ha permitido estar cada vez más cerca de lograr mi objetivo.",
+        "image": "/reviews/Silvia_andrade.webp"
+      },
+      {
+        "name": "Lina Rodriguez",
+        "role": "Estudiante",
+        "text": "Quiero expresar lo mucho que disfruto mis lecciones con Juan Diego. Me gusta especialmente que cubra todos los aspectos del idioma: gramática, pronunciación, lectura y escritura, adaptándose a las debilidades y necesidades de cada estudiante. Esto hace que sus clases sean muy personalizadas y efectivas.\n\nTambién aprecio cómo te enfocas en lo que me gusta y lo que necesito para mi carrera. Gracias a esto, aprendo de una manera más motivadora y significativa, porque todo lo que enseñas está alineado con mis intereses y objetivos profesionales.\n\nTambién agradezco que enfatice la práctica del habla: nos brinda muchas oportunidades para conversar y mejorar nuestra fluidez, lo que fortalece nuestra confianza al hablar y nos permite aplicar la gramática y la pronunciación en situaciones reales.\n\nEn resumen, sus clases son integrales, flexibles, centradas en el estudiante y muy prácticas en términos de conversación. ¡Realmente aprecio su dedicación y la calidad de su enseñanza!",
+        "image": "/reviews/lina_rodriguez.webp"
+      },
+      {
+        "name": "Jhonatan Coy",
+        "role": "Estudiante",
+        "text": "Las clases con Profe-Chill son excepcionales, adaptadas a lo que quieres mejorar, y con un ambiente muy agradable que te ayuda a relajarte y aprender de la mejor manera posible, sin presiones y siempre buscando mejorar.",
+        "image": "/reviews/jhonatan_coy.webp"
+      },
+      {
+        "name": "German Lancheros",
+        "role": "Estudiante",
+        "text": "Mi nombre es Germán. A los 75 años, mientras planeábamos un viaje para visitar a nuestra hija, quise mejorar mi inglés. Un amigo me recomendó al Profesor Diego, y tras 36 lecciones personalizadas, ahora estoy en Melbourne y he podido socializar con mi familia en inglés. Cuando regrese a Colombia, continuaré mis clases para seguir mejorando mis habilidades de conversación. Gracias, profesor.",
+        "image": "/reviews/German_lancheros.webp"
+      },
+      {
+        "name": "David Calderon",
+        "role": "Estudiante",
+        "text": "Tomé clases personalizadas de inglés con Juan Diego, Profe Chill, y desde el inicio se sintieron diferentes. Las clases son totalmente adaptadas a uno, sin presión y con muchísimo espacio para conversar. No es el típico enfoque de libros y reglas todo el tiempo, sino aprender usando el idioma de forma real.\n\nGran parte de las clases se basa en la conversación, lo cual fue clave para mí. Poco a poco fui perdiendo el miedo y la pena al hablar, entendiendo que equivocarse hace parte del proceso. Esa confianza fue creciendo clase tras clase y hoy puedo comunicarme con mucha más soltura.\n\nEste proceso me permitió moverme con facilidad en el exterior durante viajes de trabajo y sentirme mucho más cómodo al hablar con personas en mi entorno laboral, donde muchas veces el inglés es indispensable. Ahora las conversaciones no se sienten forzadas ni estresantes, sino naturales.\n\nJuan Diego tiene una forma muy tranquila de enseñar, escucha, adapta las clases según lo que va notando y hace que el aprendizaje fluya. Más que estudiar inglés, sentí que estaba practicando para la vida real.",
+        "image": "/reviews/David_Calderon.webp"
+      }
+    ]
   }
 }

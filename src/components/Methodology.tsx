@@ -7,7 +7,7 @@ interface Props {
 
 const videos = [
   '/scrollytelling/Video_Generation_Woman_at_Desk.mp4',
-  '/scrollytelling/Video_de_Ingeniero_F_Profechill.mp4',
+  '/scrollytelling/Engineer_Video_Without_McLaren.mp4',
   '/scrollytelling/Video_Correction_German_Tourist_in_Peru.mp4',
   '/scrollytelling/Video_de_Estudiante_en_Harvard.mp4',
 ];
